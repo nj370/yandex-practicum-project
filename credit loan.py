@@ -1,48 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# Hi Aong. I'm Svetlana and will review your project. I've added all my comments to new cells with different coloring. Please don't delete my comments.
-# 
-# 
-# The first time I see a mistake, I'll just point it out and let you find it and fix it yourself. In a real job, your boss will do the same, and I'm trying to prepare you to work as an Data Analyst. But if you can't handle this task yet, I'll give you a more accurate hint at the next check.
-# 
-# <div class="alert alert-success" role="alert">
-# Reviewer's comment v. 1:
-#     
-# If you did something great I'm using green color for my comment
-# </div>
-# 
-# <div class="alert alert-warning" role="alert">
-# Reviewer's comment v. 1:
-#     
-# If I want to give you advice or think that something can be improved, then I'll use yellow. This is an optional recommendation.
-# </div>
-# 
-# <div class="alert alert-danger" role="alert">
-# Reviewer's comment v. 1:
-#     
-# If the topic requires some extra work so I can accept it then the color will be red
-# </div>
-# 
-# ## Review v. 1
-# 
-# Thank you for sending your project. You've done a really good job on it! While there's room for improvement, on the whole, your project is looking good. I've found some tiny mistakes in your project. They'll be easy to fix. There are also some comments for improvement. They don’t mean that you’ve done anything wrong, but they’re things we wanted to point out that can help you further develop your skills. Every issue with our code is a chance for us to learn something new. Good luck! 
-# 
-# ## Review v. 2
-# 
-# Your corrections look great, you've improved your work significantly! I'm glad to say that your project has been accepted. Keep up the good work, and good luck on the next sprint!
 
-# ## Analyzing borrowers’ risk of defaulting
-# 
-# Your project is to prepare a report for a bank’s loan division. You’ll need to find out if a customer’s marital status and number of children has an impact on whether they will default on a loan. The bank already has some data on customers’ credit worthiness.
-# 
-# Your report will be considered when building a **credit scoring** of a potential customer. A ** credit scoring ** is used to evaluate the ability of a potential borrower to repay their loan.
-
-# <div class="alert alert-warning" role="alert">
-# Reviewer's comment v. 1:
-#     
-# It’s great that you described the project, but it will be nice to add a table of contents with links.
-# 
 # Please see for details: https://www.markdowntutorial.com/
 # </div>
 
@@ -79,9 +38,7 @@ print(df.describe())
 # many days employed values are negative. Such values are probably errors, and should be corrected.On closer inspection, I noticed that days employed values of samples that are classified as retired are positive, whilst the days employed values of samples that are classified as employed are negative
 
 # <div class="alert alert-danger" role="alert">
-# Reviewer's comment v. 1:
-#     
-# Could you please use .info()/.describe() to see general information about our data?
+
 # </div>
 
 # <div class="alert alert-success" role="alert">
@@ -126,9 +83,7 @@ print(df.isnull().sum())
 # the days employed values are corrected by being transformed into positve values. I checked for missing values and replaced the identified missing values.Columns that have missing values are days_employed and total_income. The numbers of missing values for days_employed and total_income are equal, this implies that the type of missing values in this study is missing at random.I hypothesize that the interconnection between the two are caused by samples not being able to remember how many days they have been employed, hence not being able to estimate total incomes.
 
 # <div class="alert alert-success" role="alert">
-# Reviewer's comment v. 1:
-#     
-# Well done that you analysed a possible reason of a missing values. 
+
 # </div>
 
 # ### Data type replacement
@@ -152,9 +107,7 @@ df.info()
 # I decided to convert values that are of float type to values that are of integer type. This is because the decimal points are not of huge importance and ,therefore, can be ignored.
 
 # <div class="alert alert-success" role="alert">
-# Reviewer's comment v. 1:
-#     
-# It's great that you brought the data to the desired formats.
+
 # </div>
 
 # ### Processing duplicates
@@ -238,21 +191,15 @@ df.loc[df['dob_years']==0,'dob_years']=42
 # 
 
 # <div class="alert alert-success" role="alert">
-# Reviewer's comment v. 1:
-#     
-# It's a good decision to use dictionary.
+
 # </div>
 
 # <div class="alert alert-danger" role="alert">
-# Reviewer's comment v. 1:
-#     
-# Could you please check data for an anomalies?
+#
 # </div>
 
 # <div class="alert alert-success" role="alert">
-# Reviewer's comment v. 2:
-#     
-# Yes, you are right, an anomalies look like a misprints.
+
 # </div>
 
 # ### Categorizing Data
@@ -308,15 +255,11 @@ print(df.head())
 # in order to answer the three questions required by this assignment, I categorised data by people with kids, income and marital status. 
 
 # <div class="alert alert-danger" role="alert">
-# Reviewer's comment v. 1:
-#     
-# Yes, a loan purposes was categorized correctly. But could you please categorize a total income and number of children columns into more categories to see dependency clearly?
+
 # </div>
 
 # <div class="alert alert-success" role="alert">
-# Reviewer's comment v. 2:
-#     
-# You categorized the data correctly.
+
 # </div>
 
 # ### Step 3. Answer these questions
@@ -360,9 +303,7 @@ print('probability of people with 5 children defaulting is 0%')
 # The data shows that probability of not having kids defaulting is lower than probabilities of people with kids defaulting.However, probability of poeple with 5 children defaulting is the lowest (0%). I hypothesise that this is because only wealthy people have 5 children.
 
 # <div class="alert alert-success" role="alert">
-# Reviewer's comment v. 2:
-#     
-# An excellent analysis :)
+
 # </div>
 
 # - Is there a relation between marital status and repaying a loan on time?
@@ -405,9 +346,7 @@ print('probability of widow/widower {:.2%}'.format(widowpd))
 # unmarried has the highest default rate among the marital statuses.It is very possible that being in partnership with someone is more economical than living alone. people who are in a partnership may have high incomes by combining incomes whilst benefiting from economy of scale such as bulk purchasing.Civil partnership has the second highest default rate. I hypothesise that this is because combining incomes may be difficult or may not be possible due to a lack of law to support such kind of arrangement. The 3 other marital statuses have very similar rates. Married people have lower default rate due to the explanation given above. The other 2 martial statuses are the lowest possibly because of the same reason. I hypothesise that these people have either inherited assets from their deceased partners or gain alimony after the divorce.
 
 # <div class="alert alert-success" role="alert">
-# Reviewer's comment v. 1:
-#     
-# Please note that you can also use a correlation function to check dependency between variables. However, please take into account that it shows only linear dependecy between variables. Maybe this link will be interesting for you: https://machinelearningmastery.com/how-to-use-correlation-to-understand-the-relationship-between-variables/.
+
 # </div>
 
 # - Is there a relation between income level and repaying a loan on time?
@@ -476,9 +415,7 @@ print('probability of wedding defaulting {:.2%}'.format(weddingpd))
 
 
 # <div class="alert alert-success" role="alert">
-# Reviewer's comment v. 1:
-#     
-# Well done for using .format().
+
 # </div>
 
 # ### Conclusion
@@ -499,15 +436,12 @@ print('probability of wedding defaulting {:.2%}'.format(weddingpd))
 # 
 
 # <div class="alert alert-danger" role="alert">
-# Reviewer's comment v. 1:
-#     
-# Could you please make a recommendations to a bank’s loan division? How to chose the best clients? 
+
 # </div>
 
 # <div class="alert alert-success" role="alert">
 # Reviewer's comment v. 2:
-#     
-# Definitely, this information will be useful for a bank’s loan division.
+
 # </div>
 
 # ### Project Readiness Checklist
